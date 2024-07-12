@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCNC Landing Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <header>
+        <div class="top_bar">
+            <div class="left_container">
+                <div class="mail">
+                    <i class="icon-mail" data-feather="mail"></i>
+                    <p>.  vcnc@gmail.com</p>
+                </div>
+                <div class="phone">
+                    <i class="icon-phone" data-feather="phone"></i>
+                    <p>+250123456789</p>
+                </div>
+            </div>
+            <div class="right_container">
+                <div class="icons">
+                    <div class="social-icon">
+                        <i class="icon-facebook" data-feather="facebook"></i>
+                    </div>
+                    
+                    <div class="social-icon">
+                        <i class="icon-instagram" data-feather="instagram"></i>
+                    </div>
+                    <div class="social-icon">
+                        <i class="icon-linkedin" data-feather="linkedin"></i>
+                    </div>
+                </div>
+                <button><a href="#contact">Donate now</a></button>
+            </div>
+        </div>
+    
+        <div class="menu_bar">
+            <img class="logo" src="../assets/vulnarable_children_need_care_logo.jpeg" alt="VCNC Logo">
+            <i class="menu_button" data-feather="menu"></i>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#About Us">About Us</a></li>
+                    <li><a href="#Mission">Mission</a></li>
+                    <li><a href="#Vision">Vision</a></li>
+                    <li><a href="#values">Values</a></li>
+                    <li><a href="#Contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuButton = document.querySelector(".menu_button");
+            const navbar = document.querySelector(".navbar");
+
+            menuButton.addEventListener("click", function() {
+                navbar.classList.toggle("active");
+            });
+        });
+
+        feather.replace();
+    </script>
+
+    <section class="home">
+        <h1>Welcome to VCNC <br> (Vulnerable Children Need Care)</h1>
+        <p>A beacon of hope and support for vulnerable children. <br> Founded in 2019 in the heart of Kigali, Kimironko,
+            <br> Kwa Mushimire center, VCNC was born out of a deep compassion <br> and commitment to transforming the lives of children in need.</p>
+        <div class="button-container">
+            <button class="meets-us">Meet Us</button>
+            <button class="learn-more">Learn More</button>
+        </div>
+    </section>
+
+</body>
+</html>
