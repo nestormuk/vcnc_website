@@ -6,14 +6,15 @@
     <title>VCNC Landing Page</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
+    
 </head>
 <body>
     <header>
         <div class="top_bar">
             <div class="left_container">
                 <div class="mail">
-                    <i class="icon-mail" data-feather="mail"></i>
-                    <p>.  vcnc@gmail.com</p>
+                    <i class="icon-mail"  data-feather="mail"></i>
+                    <p>vcnc@gmail.com</p>
                 </div>
                 <div class="phone">
                     <i class="icon-phone" data-feather="phone"></i>
@@ -52,18 +53,7 @@
             </nav>
         </div>
     </header>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const menuButton = document.querySelector(".menu_button");
-            const navbar = document.querySelector(".navbar");
-
-            menuButton.addEventListener("click", function() {
-                navbar.classList.toggle("active");
-            });
-        });
-
-        feather.replace();
-    </script>
+    
 
     <section class="home">
         <h1>Welcome to VCNC <br> (Vulnerable Children Need Care)</h1>
@@ -74,6 +64,111 @@
             <button class="learn-more">Learn More</button>
         </div>
     </section>
+    <section class="about">
+        <div class="container">
+            <!-- Part 1 -->
+            <div class="about-part">
+                <div class="image">
+                    <img src="../assets/baby-picture-druming.jpg" alt="About Us Image 1"> <!-- Replace with actual image path -->
+                </div>
+                <div class="text">
+                    <h2>About Us</h2>
+                    <p>
+                        Welcome to <span class="highlight">VCNC (Vulnerable Children Need Care)</span>, a beacon of hope and support for 
+                        <span class="highlight">vulnerable children</span>. Founded in 2019 in the heart of Kigali, Kimironko, Kwa Mushimire center, 
+                        VCNC was born out of a deep compassion and commitment to transforming the lives of children in need.
+                    </p>
+                </div>
+            </div>
+            <!-- Part 2 -->
+            <div class="about-part reverse">
+                <div class="image">
+                    <img src="../assets/childrens_vcnc.jpeg"  alt="About Us Image 2"> <!-- Replace with actual image path -->
+                </div>
+                <div class="text">
+                    <p>
+                        Our journey began with our founder's simple yet profound gesture of connecting with street 
+                        children through the universal language of music. Playing guitar for emotional healing, visiting 
+                        the families of those who had them, and listening to their stories, our founder laid the foundation 
+                        for what would become a thriving community dedicated to the well-being of vulnerable children.
+                    </p>
+                </div>
+            </div>
+            <!-- Part 3 (PC Only) -->
+            <div class="about-part pc-only">
+                <div class="image">
+                    <img src="../assets/baby-picture-druming.jpg" alt="About Us Image 3"> <!-- Replace with actual image path -->
+                </div>
+                <div class="text">
+                    <p>
+                        During the COVID-19 pandemic, the need to help these street children intensified even further. 
+                        More children were exposed to poverty, more families fell unable to cater for their offsprings, 
+                        which all contributed to an increase of street children and school dropouts.
+                    </p>
+                </div>
+            </div>
+            <!-- Part 4 (PC Only) -->
+            <div class="about-part reverse pc-only">
+                <div class="image">
+                    <img src="../assets/baby-picture-druming.jpg" alt="About Us Image 4"> <!-- Replace with actual image path -->
+                </div>
+                <div class="text">
+                    <p>
+                        The founder reached out to like-minded youths to organize a christmas day which took place on 
+                        December 26, 2024, where 34 street children were hosted.
+                        This marked the birth of VCNC. The attendees were inspired by the dreams the kids had, and the 
+                        desire to transform their lives. It was immediately concluded to take the most promising kids 
+                        back to school, encourage them to go back to their families, and provide basic needs they faced 
+                        regularly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="mission-vision">
+        <div class="container">
+            <div class="card mission">
+                <div class="icon-container">
+                    <img src="../assets/mission_icon.PNG" alt="Mission Icon"> <!-- Replace with actual icon path -->
+                </div>
+                <div class="text-container">
+                    <h2>Mission</h2>
+                    <p>VCNC is dedicated to providing holistic support to young, vulnerable children facing adversity.
+                        Our mission is to empower these children by addressing challenges such as addiction to drugs
+                        (those already on street), limited access to education, and insufficient basic needs through
+                        creative initiatives, community engagement, and collaborative fundraising efforts. We strive to
+                        create a positive impact on their lives.</p>
+                </div>
+            </div>
+            <div class="card vision">
+                <div class="icon-container">
+                    <img src="../assets/vision_icon.PNG" alt="Vision Icon"> <!-- Replace with actual icon path -->
+                </div>
+                <div class="text-container">
+                    <h2>Vision</h2>
+                    <p>VCNC envisions a future where every vulnerable child not only overcomes adversity but thrives.
+                        Our vision is to build a society that prioritizes the well-being and education of these children,
+                        providing them with the support and opportunities needed for a brighter and more promising
+                        future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuButton = document.querySelector(".menu_button");
+            const navbar = document.querySelector(".navbar");
 
+            menuButton.addEventListener("click", function() {
+                navbar.classList.toggle("active");
+            });
+
+            feather.replace();
+        });
+    </script>
 </body>
 </html>
