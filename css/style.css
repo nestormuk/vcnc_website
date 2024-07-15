@@ -33,23 +33,21 @@ header {
 
 .right_container {
     order: 2;
-
 }
 
 .mail, .phone {
     display: flex;
     align-items: center;
     margin-right: 20px;
-    font-size: 12px; /* Reduced font size */
-    
+    font-size: 12px;
 }
 
 .mail i, .phone i {
     margin-right: 5px;
-    width: 6px; /* Adjust icon size */
-    height: 6px; /* Adjust icon size */  
-    
+    width: 6px;
+    height: 6px;
 }
+
 .icon-mail,.icon-phone,.icon-facebook,.icon-instagram,.icon-linkedin {
     width: 17px;
     height: 17px;
@@ -58,17 +56,15 @@ header {
 
 .icons {
     display: flex;
-    margin-right: 10px; /* Reduced margin */
+    margin-right: 10px;
 }
 
 .social-icon {
-    margin-right: 5px; /* Reduced margin */
-
+    margin-right: 5px;
 }
 
 .social-icon i {
     color: white;
-
 }
 
 button {
@@ -76,9 +72,9 @@ button {
     border: none;
     padding: 10px 10px;
     cursor: pointer;
-    font-size: 14px; /* Reduced font size */
+    font-size: 14px;
 }
-button:hover{
+button:hover {
     background-color: white;
     animation-fill-mode: forwards;
 }
@@ -112,18 +108,22 @@ button a {
 }
 
 .navbar li {
-    margin-left: 15px; /* Reduced margin */
+    margin-left: 15px;
 }
 
 .navbar a {
     text-decoration: none;
     color: black;
-    font-size: 14px; /* Reduced font size */
+    font-size: 14px;
 }
 .navbar a:hover {
     color: #EDD159;
-    
 }
+#myLinks {
+    display: none;
+    /* Add other styles as needed */
+}
+
 
 /* Tablet and Mobile View */
 @media (max-width: 768px) {
@@ -156,7 +156,7 @@ button a {
 
     .button_links_container {
         flex-direction: column;
-        align-items: flex-start; /* Changed to flex-start */
+        align-items: flex-start;
     }
 
     .button_links_container .icons, 
@@ -167,19 +167,78 @@ button a {
     .left_container, .right_container {
         width: 100%;
         justify-content: space-between;
-        padding: 0 10px; /* Added padding for better spacing */
+        padding: 0 10px;
     }
 
     .mail, .phone {
-        font-size: 12px; /* Further reduced font size for mobile */
+        font-size: 12px;
     }
 
     button {
-        font-size: 12px; /* Further reduced font size for mobile */
+        font-size: 12px;
     }
 
     .navbar a {
-        font-size: 12px; /* Further reduced font size for mobile */
+        font-size: 12px;
+    }
+}
+
+
+/* Tablet and Mobile View */
+@media (max-width: 768px) {
+    .menu_button {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-top: 1px solid #ccc;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .button_links_container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button_links_container .icons, 
+    .button_links_container button {
+        margin-bottom: 10px;
+    }
+
+    .left_container, .right_container {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .mail, .phone {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+    .navbar a {
+        font-size: 12px;
     }
 }
 
@@ -251,6 +310,13 @@ button a {
     background-color: transparent;
     border: 2px solid white; /* White border */
     color: white; /* Button text color */
+}
+.home .learn-more:hover {
+    background-color: #EDD159;
+    
+}
+.home .learn-more a{
+    color: white;
 }
 
 /* PC View */
@@ -379,8 +445,8 @@ button a {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 450px;
-    width: 85%; 
+    max-width: 850px;
+    width: 100%; 
     text-align: center;
     position: relative;
 }
@@ -448,6 +514,34 @@ button a {
 @media (max-width: 1023px) {
     .mission-vision .container {
         flex-direction: column;
+        justify-items: center;
     }
+}
+/* Desktop and large screens */
+@media (min-width: 1024px) {
+    .mission-vision .card {
+        width: 45%; /* Two cards per row */
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .mission-vision .card {
+        width: 60%; /* One card per row, but wider */
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .mission-vision .card {
+        width: 85%; /* One card per row */
+    }
+}
+
+/* Ensure images are responsive and rounded */
+.mission-vision img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
