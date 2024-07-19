@@ -67,6 +67,11 @@ header {
     color: white;
 }
 
+.social-icon a {
+    color: white;
+    text-decoration: none;
+}
+
 button {
     background-color: #EDD159;
     border: none;
@@ -74,6 +79,7 @@ button {
     cursor: pointer;
     font-size: 14px;
 }
+
 button:hover {
     background-color: white;
     animation-fill-mode: forwards;
@@ -116,73 +122,15 @@ button a {
     color: black;
     font-size: 14px;
 }
+
 .navbar a:hover {
     color: #EDD159;
 }
+
 #myLinks {
     display: none;
     /* Add other styles as needed */
 }
-
-
-/* Tablet and Mobile View */
-@media (max-width: 768px) {
-    .menu_button {
-        display: block;
-    }
-
-    .navbar {
-        display: none;
-    }
-
-    .navbar.active {
-        display: block;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        border-top: 1px solid #ccc;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar li {
-        margin: 10px 0;
-    }
-
-    .button_links_container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .button_links_container .icons, 
-    .button_links_container button {
-        margin-bottom: 10px;
-    }
-
-    .left_container, .right_container {
-        width: 100%;
-        justify-content: space-between;
-        padding: 0 10px;
-    }
-
-    .mail, .phone {
-        font-size: 12px;
-    }
-
-    button {
-        font-size: 12px;
-    }
-
-    .navbar a {
-        font-size: 12px;
-    }
-}
-
 
 /* Tablet and Mobile View */
 @media (max-width: 768px) {
@@ -248,12 +196,11 @@ button a {
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 75vh; /* Full height for all devices */
+    height: 80vh; /* Full height for all devices */
 }
 
 .home::before {
     content: '';
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -294,7 +241,7 @@ button a {
     margin-left: 20px;
 }
 
-.home button {
+.home a {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
@@ -304,20 +251,14 @@ button a {
     background-color: #EDD159; /* Yellow background */
     border: none;
     color: black; /* Button text color */
+    text-decoration: none;
+}
+.meets-us:hover {
+    background-color: white;
+    animation-fill-mode: forwards;
 }
 
-.home .learn-more {
-    background-color: transparent;
-    border: 2px solid white; /* White border */
-    color: white; /* Button text color */
-}
-.home .learn-more:hover {
-    background-color: #EDD159;
-    
-}
-.home .learn-more a{
-    color: white;
-}
+
 
 /* PC View */
 @media (min-width: 1024px) {
@@ -385,7 +326,7 @@ button a {
     margin-bottom: 5px;
 }
 
-.about .highlight {
+ .highlight {
     color: #EDD159; /* Yellow highlight */
 }
 
@@ -428,7 +369,6 @@ button a {
 .mission-vision {
     padding: 50px 20px;
     background-color: white;
-    
 }
 
 .mission-vision .container {
@@ -447,8 +387,13 @@ button a {
     padding: 20px;
     max-width: 850px;
     width: 100%; 
+    height: 220px;
     text-align: center;
     position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .mission-vision .card::after {
@@ -475,8 +420,8 @@ button a {
 .mission-vision .icon-container {
     background-color: white;
     border: #007bff;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -485,12 +430,12 @@ button a {
 }
 
 .mission-vision .vision .icon-container {
-    background-color: #ff7f00;
+    background-color: #ffff;
 }
 
 .mission-vision .icon-container img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 .mission-vision h2 {
@@ -501,6 +446,7 @@ button a {
 .mission-vision p {
     font-size: 1em;
     color: #333;
+    text-align: justify;
 }
 
 /* PC View */
@@ -517,6 +463,7 @@ button a {
         justify-items: center;
     }
 }
+
 /* Desktop and large screens */
 @media (min-width: 1024px) {
     .mission-vision .card {
@@ -545,6 +492,7 @@ button a {
     border-radius: 10px;
 }
 
+
 /* Values Styles */
 
 .values {
@@ -557,6 +505,7 @@ button a {
     text-align: center;
     font-size: 2em;
     margin-bottom: 20px;
+    
 }
 
 .values-container {
@@ -576,6 +525,7 @@ button a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     width: 100%;
+    height: 260px;
     max-width: 400px;
     margin-bottom: 20px;
     text-align: left;
@@ -618,4 +568,67 @@ button a {
     .value-card:nth-child(4n) {
         margin-right: 0;
     }
+}
+
+/* our management section */
+
+.management {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.management h2 {
+    font-size: 2em;
+    color: #EDD159; /* Adjust color as needed */
+    margin-bottom: 20px;
+}
+
+.management-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.member-card {
+    background-color: none;
+    border-radius: 50%;
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    
+}
+
+.member-card img {
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #EDD159;
+}
+
+.member-info {
+    margin-top: 10px;
+}
+
+.member-info h3 {
+    font-size: 1.2em;
+    color: black;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.member-info p {
+    font-size: 1em;
+    color: black;
+    margin: 0;
+}
+
+footer {
+    background-color: #EDD159;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    
+    bottom: 0;
+    width: 100%;
 }
