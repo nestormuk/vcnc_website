@@ -560,7 +560,7 @@ button a {
 
     .value-card {
         flex: 1 1 22%;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         max-width: none;
         margin-right: 2%;
     }
@@ -627,8 +627,6 @@ footer {
     background-color: #EDD159;
     color: black;
     text-align: center;
-    padding: 1rem;
-    
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0px;
+    width: auto;
 }
