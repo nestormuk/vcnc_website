@@ -660,3 +660,12 @@ button a {
     text-decoration: none;
     cursor: pointer;
 }
+
+footer {
+    background-color: #EDD159;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    width: auto;
+}
