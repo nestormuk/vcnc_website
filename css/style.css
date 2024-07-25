@@ -49,8 +49,8 @@ header {
 }
 
 .icon-mail,.icon-phone,.icon-facebook,.icon-instagram,.icon-linkedin {
-    width: 17px;
-    height: 17px;
+    width: 20px;
+    height: 20px;
     margin: 5px;
 }
 
@@ -200,7 +200,7 @@ button a {
 
 /* Home Section */
 .home {
-    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url('../assets/childrens_vcnc.jpeg'); /* Replace with actual image path */
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url('../assets/childrens_vcnc.jpeg'); /* Replace with actual image path */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -670,39 +670,106 @@ button a {
     cursor: pointer;
 }
 
+/* footer styles*/
 footer {
     background-color: #EDD159;
     color: black;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     bottom: 0;
     width: auto;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-social-icons {
     display: flex;
     justify-content: center;
-    flex: 1;
+    margin-bottom: 15px;
 }
 
-.social-icons {
-    margin-right: 15px;
+.footer-social-icon {
+    margin: 0 10px;
 }
 
-.social-icons a  {
+.footer-social-icon a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.footer-social-icon a i {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-social-icon a .icon-facebook {
+    color: #3b5998;
+}
+
+.footer-social-icon a .icon-instagram {
+    color: #e4405f;
+}
+
+.footer-social-icon a .icon-linkedin {
+    color: #0077b5;
+}
+
+.footer-social-icon a .icon-twitter {
+    color: #1da1f2;
+}
+
+.footer-social-icon a:hover {
+    background-color: #f1f1f1;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.footer-nav a {
     color: black;
-    width: 44px;
-    height: 44px;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
-.social-icons a:hover  {
+.footer-nav a:hover {
     color: white;
+    font-weight: 400;
+}
+
+footer p {
+    margin: 0;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .footer-social-icons {
-        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .footer-nav a {
+        margin-bottom: 5px;
     }
 }
