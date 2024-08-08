@@ -9,6 +9,10 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -46,7 +50,7 @@
                         </a>
                     </div>
                 </div>
-                <button><a href="tel:*182*1*1*0784602752#">Donate now</a></button>
+                <button><a href="https://shorturl.at/xLXMf" target="_blank">Donate now</a></button>
             </div>
         </div>        
     
@@ -254,65 +258,88 @@
     </section>
 
     <section id="management" class="management">
-    <h2>Our Management</h2>
-    <div class="management-container">
-        <div class="member-card">
-            <img src="../assets/gilbert_picture.jpg" alt="Gilbert Niyomuhoza">
-            <div class="member-info">
-                <h3>Gilbert Niyomuhoza</h3>
-                <p>Founder and Legal Representative</p>
+        <h2>Our Management</h2>
+        <div class="management-container">
+            <div class="member-card" data-bio="With experience in communication, Sales and Marketing, passion for education and community improvement...">
+                <img src="../assets/gilbert_picture.jpg" alt="Gilbert Niyomuhoza">
+                <div class="member-info">
+                    <h3>Gilbert Niyomuhoza</h3>
+                    <p>Founder and Legal Representative</p>
+                </div>
+            </div>
+    
+            <div class="member-card" data-bio="Benitha Isabane, a 3+ years seasoned Logistics and Operations Management professional...">
+                <img src="../assets/benitha_picture1.jpg" alt="Benitha ISABANE">
+                <div class="member-info">
+                    <h3>Benitha ISABANE</h3>
+                    <p>Strategic Planning and Development Manager</p>
+                </div>
+            </div>
+    
+            <div class="member-card" data-bio="Jean Marie is a Bachelor holder, with experience working with marginalized people and refugees...">
+                <img src="../assets/jean-marie_picture.jpg" alt="Jean Marie Ndayambaje ">
+                <div class="member-info">
+                    <h3>Jean Marie Ndayambaje </h3>
+                    <p>Finance Manager</p>
+                </div>
+            </div>
+    
+            <div class="member-card" data-bio="Furaha is a bachelor holder in Geography hons in Environmental management from University of Rwanda...">
+                <img src="../assets/joyce_picture.png" alt="Furaha Joyce Croyance">
+                <div class="member-info">
+                    <h3>Furaha Joyce Croyance</h3>
+                    <p>Outreach and Community Engagement Manager</p>
+                </div>
+            </div>
+    
+            <div class="member-card" data-bio="I am an experienced educational advisor, resilient and climate change advocate in line with UN-SDGs...">
+                <img src="../assets/liome_picture.jpg" alt="Liome KWIHANGANA">
+                <div class="member-info">
+                    <h3>Liome KWIHANGANA</h3>
+                    <p>General Advisor</p>
+                </div>
+            </div>
+    
+            <div class="member-card" data-bio="Dynamic and results-oriented professional with a proven track record in customer relations and data analytics...">
+                <img src="../assets/gloria_picture.jpg" alt="Gloria Hirwa">
+                <div class="member-info">
+                    <h3>Gloria Hirwa</h3>
+                    <p>General Advisor</p>
+                </div>
+            </div>
+    
+            <div class="member-card" data-bio="A seasoned professional, honed my skills in evaluating and enhancing team performance...">
+                <img src="../assets/gisele_picture.jpg" alt="Marie Gisele Iraguha">
+                <div class="member-info">
+                    <h3>Marie Gisele Iraguha</h3>
+                    <p>Secretary</p>
+                </div>
             </div>
         </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const memberCards = document.querySelectorAll('.member-card');
 
-        <div class="member-card">
-            <img src="../assets/benitha_picture1.jpg" alt="Benitha ISABANE">
-            <div class="member-info">
-                <h3>Benitha ISABANE</h3>
-                <p>Strategic Planning and Development Manager</p>
-            </div>
-        </div>
+    memberCards.forEach(card => {
+        const bioText = card.getAttribute('data-bio');
+        const bioDiv = document.createElement('div');
+        bioDiv.classList.add('member-bio');
+        bioDiv.innerText = bioText;
+        card.appendChild(bioDiv);
 
-        <div class="member-card">
-            <img src="../assets/jean-marie_picture.jpg" alt="Jean Marie Ndayambaje ">
-            <div class="member-info">
-                <h3>Jean Marie Ndayambaje </h3>
-                <p>Finance Manager </p>
-            </div>
-        </div>
+        card.addEventListener('click', () => {
+            bioDiv.style.display = bioDiv.style.display === 'block' ? 'none' : 'block';
+        });
 
-        <div class="member-card">
-            <img src="../assets/joyce_picture.png" alt="Furaha Joyce Croyance">
-            <div class="member-info">
-                <h3>Furaha Joyce Croyance</h3>
-                <p>Outreach and Community Engagement Manager</p>
-            </div>
-        </div>
+        card.addEventListener('blur', () => {
+            bioDiv.style.display = 'none';
+        });
+    });
+});
 
-        <div class="member-card">
-            <img src="../assets/liome_picture.jpg" alt="Liome KWIHANGANA ">
-            <div class="member-info">
-                <h3>Liome KWIHANGANA </h3>
-                <p>General Advisor </p>
-            </div>
-        </div>
-
-        <div class="member-card">
-            <img src="../assets/gloria_picture.jpg" alt="Gloria Hirwa">
-            <div class="member-info">
-                <h3>Gloria Hirwa</h3>
-                <p>General Advisor</p>
-            </div>
-        </div>
-        <div class="member-card">
-            <img src="../assets/gisele_picture.jpg" alt="Marie Gisele Iraguha ">
-            <div class="member-info">
-                <h3>Marie Gisele Iraguha </h3>
-                <p> Secretary </p>
-            </div>
-        </div>
-        
-    </div>
-</section>
+    </script>
+    
     
 <footer>
     <div class="footer-container">

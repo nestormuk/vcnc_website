@@ -1,7 +1,9 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: white;
     color: black;
 }
@@ -242,12 +244,22 @@ button a {
 }
 
 /* Home Section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .home {
     background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url('../assets/childrens_vcnc.jpeg'); /* Replace with actual image path */
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 80vh; /* Full height for all devices */
+    height: 79vh; /* Full height for all devices */
+    animation: fadeIn 3s;
 }
 
 .home::before {
@@ -259,6 +271,16 @@ button a {
  
     z-index: 1;
 }
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 .home .content {
     position: relative;
@@ -268,20 +290,23 @@ button a {
     max-width: 600px; /* Limit width for better text placement */
     margin: auto;
     z-index: 2; /* Ensure text is above the overlay */
+    
 }
 
 .home h1 {
-    font-size: 2.5em; /* Larger size for better visibility */
+    font-size: 2em; /* Larger size for better visibility */
     font-weight: bold;
     margin: 0 20px;
     color: white; /* Ensure text is white */
     padding-top: 30px;
+    animation: slideLeft 5s;
 }
 
 .home p {
     font-size: 1em; /* Increased size */
     margin: 20px 20px;
     color: white; /* Ensure text is white */
+    animation: slideLeft 5s;
 }
 
 .home .button-container {
@@ -303,6 +328,7 @@ button a {
     border: none;
     color: black; /* Button text color */
     text-decoration: none;
+    animation: slideLeft 5s;
 }
 .meets-us:hover {
     background-color: white;
@@ -316,15 +342,19 @@ button a {
     .home .content {
         margin-left: 0; /* Align text to start from the left */
         text-align: left;
+        
+    }
+    .home h1 {
+        font-size: 2.5em;
+    }
+    .home p {
+        font-size: 1.5em; /* Increased size */
+        margin: 20px 20px;
+        color: white; /* Ensure text is white */
     }
 }
 
 /* About Us Section */
-.about {
-    background-color: white;
-    padding: 0px 20px;
-}
-
 .about .container {
     display: flex;
     flex-direction: column;
@@ -622,96 +652,71 @@ button a {
     }
 }
 
-/* our management section */
 .management {
     background-color: white;
     padding: 40px 20px;
     text-align: center;
 }
-
-.management h2 {
-    font-size: 2em;
-    color: #EDD159; /* Adjust color as needed */
-    margin-bottom: 20px;
-}
-
 .management-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    position: relative;
 }
-
+.management h2 {
+    font-size: 2em;
+    color: #EDD159; /* Adjust color as needed */
+    margin-bottom: 20px;
+}
 .member-card {
     background-color: none;
     border-radius: 50%;
     text-align: center;
     width: 200px;
-    padding: 10px;
+    padding: 20px;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .member-card img {
     width: 100%;
     border-radius: 50%;
     border: 3px solid #EDD159;
+    transition: transform 0.3s;
+    
 }
 
-.member-info {
-    margin-top: 10px;
+.member-card:hover img,
+.member-card:focus img {
+    transform: scale(1.1);
 }
 
-.member-info h3 {
-    font-size: 1.2em;
-    color: black;
-    font-weight: bold;
-    margin: 5px 0;
-}
-
-.member-info p {
-    font-size: 1em;
-    color: black;
-    margin: 0;
-}
-
-.bio-popup {
+.member-bio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
     display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
+    width: 90%;
+    text-align: center;
 }
 
-.bio-content {
-    background-color: white;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    text-align: left;
+.member-card:hover .member-bio,
+.member-card:focus .member-bio {
+    display: block;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+.member-card:focus {
+    outline: none;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+
 
 /* footer styles*/
 footer {
