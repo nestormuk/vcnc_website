@@ -137,6 +137,72 @@
         <div class="button-container">
             <a href="#management" class="meets-us">Meet Us</a>
         </div>
+
+        <div class="counter-section">
+            <div class="counter-box">
+                <div class="icon-box"><i data-feather="users"></i></div>
+                <span class="counter" data-target="81">0</span>
+                <p>VCNC Members</p>
+            </div>
+            <div class="counter-box">
+                <div class="icon-box"><i data-feather="users"></i></div>
+                <span class="counter" data-target="5">0</span>
+                <p>VCNC Sponsors</p>
+            </div>
+            <div class="counter-box">
+                <div class="icon-box"><i data-feather="user"></i></div>
+                <span class="counter" data-target="14">0</span>
+                <p>VCNC Supported Children</p>
+            </div>
+            <div class="counter-box">
+                <div class="icon-box"><i data-feather="home"></i></div>
+                <span class="counter" data-target="12">0</span>
+                <p>VCNC Supported Families</p>
+            </div>
+            <div class="counter-box">
+                <div class="icon-box"><i data-feather="heart"></i></div>
+                <span class="counter" data-target="37">0</span>
+                <p>Healthcare Insurance in 2024</p>
+            </div>
+            <div class="counter-box">
+                <div class="icon-box"><i data-feather="users"></i></div>
+                <span class="counter" data-target="7">0</span>
+                <p>Female Children</p>
+            </div>
+            <div class="counter-box">
+                <div class="icon-box"><i data-feather="users"></i></div>
+                <span class="counter" data-target="7">0</span>
+                <p>Male Children</p>
+            </div>
+        </div>
+        
+        
+        <script>
+             feather.replace();
+            const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+    counter.innerText = '0';
+    
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 100;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCounter, 100);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    // Delay the start of each counter slightly to avoid any blocking
+    setTimeout(updateCounter, 900);  // This slight delay can help each counter run smoothly
+});
+
+        </script>
+
     </section>
     <section class="about" id="about-us">
         <div class="container">
