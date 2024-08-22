@@ -254,32 +254,84 @@ button a {
 }
 
 .home {
-    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url('../assets/childrens_vcnc.jpeg'); /* Replace with actual image path */
-    background-size: cover;
-    background-position: center;
     position: relative;
-    height: 100%; /* Full height for all devices */
+    height: 78vh; /* Full height of the viewport */
+    color: white; /* Ensure text is readable */
+    padding: 20px;
     animation: fadeIn 3s;
 }
 
-.home::before {
-    content: '';
+.slide {
+    position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
- 
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
     z-index: 1;
+    animation: fadeSlideshow 24s infinite;
 }
-@keyframes slideLeft {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 2;
+}
+
+.home h1, 
+.home p, 
+.home .button-container, 
+.home .counter-section {
+    position: relative;
+    z-index: 3; /* Ensure content is above slides and overlays */
+}
+
+
+
+/* Slideshow animation */
+@keyframes fadeSlideshow {
+    0% { opacity: 0; }
+    8.33% { opacity: 1; }
+    33.33% { opacity: 1; }
+    41.67% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.slide:nth-child(4) {
+    animation-delay: 12s;
+}
+
+.slide:nth-child(5) {
+    animation-delay: 16s;
+}
+
+.slide:nth-child(6) {
+    animation-delay: 20s;
 }
 
 .home .content {
@@ -289,8 +341,7 @@ button a {
     padding: 50px 20px;
     max-width: 600px; /* Limit width for better text placement */
     margin: auto;
-    z-index: 2; /* Ensure text is above the overlay */
-    
+    z-index: 3; /* Ensure text is above the overlay */
 }
 
 .home h1 {
@@ -330,6 +381,7 @@ button a {
     text-decoration: none;
     animation: slideLeft 5s;
 }
+
 .meets-us:hover {
     background-color: white;
     animation-fill-mode: forwards;
@@ -357,6 +409,7 @@ button a {
 
 
 .counter-section {
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -377,7 +430,7 @@ button a {
 .icon-box {
     width: 20px;
     height: 20px;
-    background-color: #fff;
+    background-color: #EDD159;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -402,6 +455,18 @@ button a {
     font-weight: bold;
     color: #EDD159;
     margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .counter-box {
+        width: 80px;
+    }
+    .home{
+        height: 100%;
+    }
+    .counter-box {
+        
+        padding: 5px;
+    }
 }
 
 
@@ -651,6 +716,7 @@ button a {
 
 .value-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: white;
     border: 1px solid #ccc;
@@ -658,7 +724,7 @@ button a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     width: 100%;
-    height: 290px;
+    height: auto;
     max-width: 400px;
     margin-bottom: 20px;
     text-align: left;
@@ -676,12 +742,16 @@ button a {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 60px;
-    min-height: 60px;
+    width: 60px;
+    height: 60px;
 }
 
 .text {
     flex: 1;
+    text-align: justify;
+}
+.text h3{
+    text-align: center;
 }
 
 @media (min-width: 769px) {
@@ -696,7 +766,7 @@ button a {
         margin-bottom: 10px;
         max-width: none;
         margin-right: 2%;
-        height: 410px;
+        height: 300px;
     }
 
     .value-card:nth-child(4n) {
@@ -722,6 +792,9 @@ button a {
     font-size: 2em;
     color: #EDD159;
     margin-bottom: 20px;
+}
+.management h2 span{
+    color: #000;
 }
 
 .member-card {
@@ -776,6 +849,59 @@ button a {
     font-size: 0.9em;
     line-height: 1.4;
 }
+/* support section */
+.support-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Background color matching the image */
+}
+
+.support-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.support-description {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.support-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+}
+
+.support-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px; /* Adjust the width as needed */
+    transition: transform 0.3s;
+}
+
+.support-item i {
+    width: 50px;
+    height: 50px;
+    color: #4CAF50; /* Green color similar to the image provided */
+    margin-bottom: 10px;
+}
+
+.support-item p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.support-item:hover {
+    transform: translateY(-5px);
+}
+
 
 
 

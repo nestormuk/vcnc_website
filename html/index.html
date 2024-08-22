@@ -67,6 +67,7 @@
                     <li><a href="#mission-vision">Mission</a></li>
                     <li><a href="#vision">Vision</a></li>
                     <li><a href="#values">Values</a></li>
+                    <li><a href="#support-section">Support Platforms</a></li>
                     <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeflwaELpAOU-oYWzPduAKFjrUIKYkmmu_EU8aRnRi04FHd5g/viewform" target="_blank">Join Us</a></li>
                 </ul>
             </nav>
@@ -131,6 +132,12 @@
    
 
     <section class="home" id="home">
+        <div class="slide" style="background-image: url('../assets/childrens_vcnc.jpeg');"></div>
+        <div class="slide" style="background-image: url('../assets/children_eating2.jpg');"></div>
+        <div class="slide" style="background-image: url('../assets/children_saying_hi.jpg');"></div>
+        <div class="slide" style="background-image: url('../assets/pictures_with_children.1jpg.jpg');"></div>
+        <div class="slide" style="background-image: url('../assets/pictures_with_children.2jpg.jpg');"></div>
+        <div class="slide" style="background-image: url('../assets/discussion_with_children.jpg');"></div>
         <h1>Welcome to  <span class="highlight">VCNC </span> <br> (Vulnerable Children Need Care)</h1>
         <p>A beacon of hope and support for vulnerable children. <br> Founded in 2019 in the heart of Kigali, Kimironko,
             <br> Kwa Mushimire center, VCNC was born out of a deep compassion <br> and commitment to transforming the lives of children in need.</p>
@@ -181,27 +188,28 @@
              feather.replace();
             const counters = document.querySelectorAll('.counter');
 
-counters.forEach(counter => {
-    counter.innerText = '0';
-    
-    const updateCounter = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const increment = target / 100;
+            counters.forEach(counter => {
+                counter.innerText = '0';
+                
+                const updateCounter = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = target / 100;
 
-        if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCounter, 100);
-        } else {
-            counter.innerText = target;
-        }
-    };
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCounter, 100);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
 
-    // Delay the start of each counter slightly to avoid any blocking
-    setTimeout(updateCounter, 900);  // This slight delay can help each counter run smoothly
-});
+                // Delay the start of each counter slightly to avoid any blocking
+                setTimeout(updateCounter, 900);  // This slight delay can help each counter run smoothly
+            });
 
         </script>
+        
 
     </section>
     <section class="about" id="about-us">
@@ -290,7 +298,7 @@ counters.forEach(counter => {
         <div class="values-container">
             <div class="value-card">
                 <div class="icony">V</div>
-                <div class="arrow">&rarr;</div>
+                
                 <div class="text">
                     <h3>Visionary Impact</h3>
                     <p>We envision sustainable solutions addressing root causes of community challenges. We don't just look for present well-being but also equip the community to fight against future adversity.</p>
@@ -298,7 +306,7 @@ counters.forEach(counter => {
             </div>
             <div class="value-card">
                 <div class="icony">C</div>
-                <div class="arrow">&rarr;</div>
+                
                 <div class="text">
                     <h3>Compassion </h3>
                     <p>Every initiative is driven by empathy and commitment, helping without expecting returns, valuing shared humanity over financial benefits.</p>
@@ -306,7 +314,7 @@ counters.forEach(counter => {
             </div>
             <div class="value-card">
                 <div class="icony">N</div>
-                <div class="arrow">&rarr;</div>
+                
                 <div class="text">
                     <h3>Nurturing Collaboration </h3>
                     <p>We believe in collective efforts for greater impact, encouraging every additional hand to create a supportive community.</p>
@@ -314,7 +322,7 @@ counters.forEach(counter => {
             </div>
             <div class="value-card">
                 <div class="icony">C</div>
-                <div class="arrow">&rarr;</div>
+                
                 <div class="text">
                     <h3>Community Engagement </h3>
                     <p>Inclusive participation empowers those we serve, fostering solutions through community involvement and engagement.</p>
@@ -322,12 +330,45 @@ counters.forEach(counter => {
             </div>
         </div>
     </section>
+    
+    <section class="support-section"  id="support-section">
+        <h2 class="support-title">Platforms We Support In:</h2>
+    
+        <div class="support-items">
+            
+            <div class="support-item">
+                <i data-feather="droplet"></i>
+                <p>Health insurance</p>
+            </div>
+            <div class="support-item">
+                <i data-feather="book"></i>
+                <p>School Materials</p>
+            </div>
+            <div class="support-item">
+                <i data-feather="dollar-sign"></i>
+                <p>School fees</p>
+            </div>
+            <div class="support-item">
+                <i data-feather="more-horizontal"></i>
+                <p>Hope to serve more</p>
+            </div>
+        </div>
+        <h2 class="support-title">Long-Term Plan</h2>
+        <p>Our longer term plan: You can find it in the 5 years plan</p>
+    </section>
+    
+    <!-- Add Feather Icons Script -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace();
+    </script>
+    
 
     <section id="management" class="management">
-        <h2>Our Management</h2>
+        <h2>Meet Our <span>Management </span>  Team</h2>
         <div class="management-container">
             <div class="member-card">
-                <img src="../assets/gilbert_picture.jpg" alt="Gilbert Niyomuhoza">
+                <img src="../assets/gilbert_picture.1jpg.jpg" alt="Gilbert Niyomuhoza">
                 <div class="member-info">
                     <h3>Gilbert Niyomuhoza</h3>
                     <p>Founder and Legal Representative</p>
