@@ -786,12 +786,19 @@ button a {
     text-align: center;
 }
 
-.management-container {
+.swiper-container {
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slider {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    position: relative;
 }
 
 .management h2 {
@@ -799,20 +806,21 @@ button a {
     color: #EDD159;
     margin-bottom: 20px;
 }
-.management h2 span{
+
+.management h2 span {
     color: #000;
 }
 
 .member-card {
-    background-color: #f8f8f8; /* Light background for contrast */
-    border-radius: 10px; /* Soft border radius */
+    background-color: #f8f8f8;
+    border-radius: 10px;
     text-align: center;
     width: 250px;
     padding: 20px;
     position: relative;
     cursor: default;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .member-card img {
@@ -824,7 +832,7 @@ button a {
 
 .member-card:hover img,
 .member-card:focus img {
-    transform: scale(1.05); /* Slight scale on hover for interactivity */
+    transform: scale(1.05);
 }
 
 .member-info {
@@ -840,20 +848,31 @@ button a {
 .member-info p {
     margin: 0;
     font-size: 1em;
-    color: #666; /* Softer color for the title */
+    color: #666;
 }
 
 .member-bio {
     margin-top: 10px;
-    padding: 0 10px; /* Add padding for better text alignment */
-    color: #444; /* Adjusted color for readability */
-    text-align: justify; /* Justify text for a clean, professional look */
+    padding: 0 10px;
+    color: #444;
+    text-align: justify;
 }
 
 .member-bio p {
     margin: 0;
     font-size: 0.9em;
     line-height: 1.4;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #EDD159;
+    z-index: 10;
+    position: absolute;
+}
+
+.swiper-pagination-bullet-active {
+    background: #EDD159;
 }
 /* support section */
 .support-section {
