@@ -905,22 +905,21 @@ button a {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 150px; /* Adjust the width as needed */
+    
+    width: 250px; /* Adjust the width as needed */
     transition: transform 0.3s;
 }
 
 .support-item i {
-    width: 50px;
-    height: 50px;
-    color: #4CAF50; /* Green color similar to the image provided */
-    margin-bottom: 10px;
+    width: 50px
 }
 
 .support-item p {
     margin: 0;
+    padding-top: 10px;
     font-size: 1em;
     color: #333;
+    text-align: justify;
 }
 
 .support-item:hover {
